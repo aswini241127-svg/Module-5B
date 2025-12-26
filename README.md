@@ -43,3 +43,31 @@ print(sorted_array)
 
 ## Result
 The program successfully accepts a 2D array from the user, sorts each column in ascending order, and prints both the original and column-wise sorted arrays using NumPy.
+# # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
+
+## 🎯 Aim
+To write a Python program using **NumPy** that finds the indices where elements in array `x` are greater than or equal to their corresponding elements in array `y`.
+
+## 🧠 Algorithm
+1. **Import NumPy**: Import the NumPy library.
+2. **Define Arrays**: Define two NumPy arrays, `x` and `y`, with the same shape (i.e., same number of elements).
+3. **Use Boolean Indexing**: 
+   - `x > y` gives a boolean array where elements of `x` are greater than `y`.
+   - `x == y` gives a boolean array where elements of `x` are equal to `y`.
+4. **Find Indices**: Use `np.where()` to get the indices where the conditions `x >= y` are satisfied.
+5. **Print Indices**: Print the indices where the condition holds true.
+
+## 🧾 Program
+```
+import numpy as np
+x = np.array([5, 3, 7, 1, 9])
+y = np.array([2, 4, 7, 0, 10])
+indices = np.where(x >= y)[0]
+
+print("Indices where x >= y:", indices)
+```
+## Output
+<img width="805" height="377" alt="exp1" src="https://github.com/user-attachments/assets/f62e5709-4b7e-4d9e-8e21-ef8649d294a9" />
+
+## Result
+The program successfully finds the indices where elements in array x are greater than or equal to their corresponding elements in array y.
