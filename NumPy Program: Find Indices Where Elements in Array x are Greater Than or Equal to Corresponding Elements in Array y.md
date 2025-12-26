@@ -15,28 +15,14 @@ To write a Python program using **NumPy** that finds the indices where elements 
 ## 🧾 Program
 ```
 import numpy as np
+x = np.array([5, 3, 7, 1, 9])
+y = np.array([2, 4, 7, 0, 10])
+indices = np.where(x >= y)[0]
 
-# Define the original 2D array
-arr = np.array([[1, 2, 3],
-                [4, 5, 6],
-                [7, 8, 9]])
-
-# Delete the second column (index 1)
-arr_deleted = np.delete(arr, 1, axis=1)
-
-# Define the new column to insert
-new_col = np.array([10, 11, 12])
-
-# Insert the new column at the same position (index 1)
-arr_modified = np.insert(arr_deleted, 1, new_col, axis=1)
-
-print("Original array:\n", arr)
-print("Array after deleting second column:\n", arr_deleted)
-print("Array after inserting new column:\n", arr_modified)
-Add code here
+print("Indices where x >= y:", indices)
 ```
 ## Output
-<img width="1030" height="596" alt="exp1" src="https://github.com/user-attachments/assets/03d92933-8085-422c-8d31-5682c81c9635" />
+<img width="805" height="377" alt="exp1" src="https://github.com/user-attachments/assets/f62e5709-4b7e-4d9e-8e21-ef8649d294a9" />
 
 ## Result
-The program successfully deletes the second column from 2D array using numpy
+The program successfully finds the indices where elements in array x are greater than or equal to their corresponding elements in array y.
