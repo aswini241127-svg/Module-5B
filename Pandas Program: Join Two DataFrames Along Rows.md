@@ -17,9 +17,23 @@ To write a Python program using Pandas to **join two DataFrames along rows** (ro
 ---
 
 ## 💻 Program
-
-Add code here
+```
+import pandas as pd
+df1 = pd.DataFrame({
+    'A': [1, 2, 3],
+    'B': ['a', 'b', 'c']
+})
+df2 = pd.DataFrame({
+    'A': [4, 5, 6],
+    'B': ['d', 'e', 'f']
+})
+df_new = pd.concat([df1, df2], axis=0, ignore_index=True)
+print("New DataFrame after row-wise concatenation:")
+print(df_new)
+```
 
 ## Output
+<img width="1266" height="645" alt="exp1" src="https://github.com/user-attachments/assets/4615884e-7dc5-41ba-a300-ee0b7b4966e4" />
 
 ## Result
+The program successfully join two DataFrames along rows (row-wise concatenation) and assign all data to a new DataFrame.
