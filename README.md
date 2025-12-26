@@ -71,3 +71,44 @@ print("Indices where x >= y:", indices)
 
 ## Result
 The program successfully finds the indices where elements in array x are greater than or equal to their corresponding elements in array y.
+# NumPy Program: Replace the Second Column in a 2D Array
+
+## 🎯 Aim
+To write a **NumPy** program that deletes the second column from a given 2D array and inserts a new column at the same position.
+
+## 🧠 Algorithm
+1. **Import NumPy**: Start by importing the NumPy library.
+2. **Get Input**: Get a 2D NumPy array and a new column (as another array) from the user.
+3. **Delete Column**: Use `np.delete()` to remove the second column (index 1) from the original array.
+4. **Insert Column**: Use `np.insert()` to insert the new column at the second column's original position.
+5. **Display Result**: Print the updated array with the replaced column.
+
+## 🧾 Program
+
+```import numpy as np
+
+# Define the original 2D array
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+# Delete the second column (index 1)
+arr_deleted = np.delete(arr, 1, axis=1)
+
+# Define the new column to insert
+new_col = np.array([10, 11, 12])
+
+# Insert the new column at the same position (index 1)
+arr_modified = np.insert(arr_deleted, 1, new_col, axis=1)
+
+print("Original array:\n", arr)
+print("Array after deleting second column:\n", arr_deleted)
+print("Array after inserting new column:\n", arr_modified)``
+
+Add code here
+```
+## Output
+<img width="814" height="365" alt="exp1" src="https://github.com/user-attachments/assets/49a03c5b-ed4f-4a99-84e0-9da7bc78ea6a" />
+
+## Result
+The program successfully deletes the second column from 2D array using numpy
